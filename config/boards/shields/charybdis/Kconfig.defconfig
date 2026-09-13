@@ -15,3 +15,12 @@ config ZMK_SPLIT
 	
 endif
 
+if SHIELD_CHARYBDIS_DONGLE
+
+config ZMK_KEYBOARD_NAME
+	default "Charybdis"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+	
+endif
