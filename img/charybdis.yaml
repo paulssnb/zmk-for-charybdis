@@ -1,27 +1,27 @@
 layout: {zmk_keyboard: charybdis}
 layers:
-  Base:
-  - Q
+  BASE:
+  - '&td_q_ae'
   - W
   - E
   - R
   - T
   - Y
-  - U
-  - I
+  - '&td_u_h'
+  - '&td_i_mz'
   - O
   - P
-  - {t: A, h: LSHFT}
-  - {t: S, h: Ctrl}
-  - D
-  - F
+  - {t: A, h: Cmd}
+  - {t: S, h: Alt}
+  - {t: D, h: Ctrl}
+  - {t: F, h: LSHFT}
   - G
   - H
-  - J
-  - K
-  - {t: L, h: Ctrl}
-  - {t: ;, h: LSHFT}
-  - {t: Z, h: Mouse}
+  - {t: J, h: RSHFT}
+  - {t: K, h: Ctrl}
+  - {t: L, h: Alt}
+  - {t: '''', h: Cmd}
+  - {t: Z, h: BUTTON}
   - X
   - C
   - V
@@ -30,153 +30,265 @@ layers:
   - M
   - ','
   - .
-  - {t: /, h: Mouse}
-  - Cmd
-  - Space
-  - {t: Enter, h: Lower}
-  - {t: Enter, h: Raise}
-  - Alt
-  Lower:
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '['
-  - ']'
-  - F1
-  - F2
-  - F3
-  - F4
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - ''
-  - \
-  - F5
-  - F6
-  - F7
-  - F8
-  - '9'
-  - '0'
-  - '-'
-  - '='
-  - ''
-  - ''
-  - F9
-  - F10
-  - F11
-  - F12
-  - LEFT WIN
-  - Space
-  - {type: held}
-  - Enter
-  - Alt
-  Raise:
-  - Sft+1
-  - Sft+2
-  - Sft+3
-  - Sft+4
-  - Sft+[
-  - Sft+]
-  - Tab
-  - ESC
+  - {t: FSLH, h: BUTTON}
+  - {t: ESC, h: MEDIA}
+  - {t: Space, h: NAV}
+  - {t: Tab, h: FUN}
+  - {t: Enter, h: SYM}
+  - {t: BSPC, h: NUM}
+  BTAP: ['&td_q_ae', W, E, R, T, Y, '&td_u_h', '&td_i_mz', O, P, A, S, D, F, G, H, J, K, L, '''', Z, X, C, V, B, N, M, ',', ., FSLH, ESC, Space, Tab, Enter, BSPC]
+  CDH:
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
   - ''''
-  - BSPC
-  - Sft+5
-  - Sft+6
-  - Sft+7
-  - Sft+8
-  - DEL
-  - Sft+\
-  - CAPSLOCK
-  - ↑
-  - Alt
+  - {t: A, h: Cmd}
+  - {t: R, h: Alt}
+  - {t: S, h: Ctrl}
+  - {t: T, h: LSHFT}
+  - G
+  - M
+  - {t: N, h: RSHFT}
+  - {t: E, h: Ctrl}
+  - {t: I, h: Alt}
+  - {t: O, h: Cmd}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - FSLH
+  - {t: ESC, h: MEDIA}
+  - {t: Space, h: NAV}
+  - {t: Tab, h: FUN}
+  - {t: Enter, h: SYM}
+  - {t: BSPC, h: NUM}
+  CTAP: [Q, W, F, P, B, J, L, U, Y, '''', A, R, S, T, G, M, N, E, I, O, Z, X, C, D, V, K, H, ',', ., FSLH, ESC, Space, Tab, Enter, BSPC]
+  NAV:
   - ''
-  - Sft+9
-  - Sft+0
-  - Sft+-
-  - Sft+=
-  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - Ctl+Y
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - Ctl+Z
+  - Cmd
+  - Alt
+  - Ctrl
+  - LSHFT
   - ''
   - ←
   - ↓
+  - ↑
   - →
+  - CLCK
   - ''
-  - LEFT WIN
-  - Space
+  - ''
+  - ''
+  - ''
+  - ''
+  - Home
+  - PgDn
+  - PgUp
+  - End
+  - INS
+  - ''
+  - {type: held}
+  - ''
   - Enter
+  - DEL
+  BUTTON:
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - ''
+  - ''
+  - Ctl+Z
+  - Ctl+Y
+  - ''
+  - ''
+  - Ctl+Y
+  - Ctl+Z
+  - ''
+  - ''
   - {type: held}
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - ''
+  - ''
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - ''
+  - '&mkp MCLK'
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - '&mkp MB4'
+  - '&mkp MB5'
+  MEDIA:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - RGB TOG
+  - RGB EFF
+  - RGB HUI
+  - RGB SAI
+  - RGB BRI
+  - Cmd
   - Alt
-  Mouse:
+  - Ctrl
+  - LSHFT
+  - ''
+  - EP TOG
+  - PREV
+  - VOL DN
+  - VOL UP
+  - NEXT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - MUTE
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - ''
   - BT CLR
-  - BT CLR
-  - ''
-  - {t: BT, h: '2'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '0'}
+  - RGB BRD
+  - {type: held}
   - ''
   - ''
-  - '&mkp MCLK'
+  - STOP
+  - PP
+  NUM:
+  - '['
+  - '7'
+  - '8'
+  - '9'
+  - ']'
   - ''
   - ''
   - ''
   - ''
-  - '&mkp MCLK'
+  - ''
+  - ;
+  - '4'
+  - '5'
+  - '6'
+  - '='
+  - ''
+  - RSHFT
+  - Ctrl
+  - Alt
+  - Cmd
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - BSLH
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - .
+  - '0'
+  - '-'
+  - ''
+  - {type: held}
+  SYM:
+  - '{'
+  - '&'
+  - '*'
+  - (
+  - '}'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ':'
+  - $
+  - '%'
+  - ^
+  - +
+  - ''
+  - RSHFT
+  - Ctrl
+  - Alt
+  - Cmd
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - '|'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - (
+  - )
+  - _
+  - {type: held}
+  - ''
+  FUN:
+  - F13
+  - F14
+  - F15
+  - F16
+  - ''
+  - PSCRN
+  - F7
+  - F8
+  - F9
+  - F12
+  - Cmd
+  - Alt
+  - Ctrl
+  - LSHFT
+  - ''
+  - SLCK
+  - F4
+  - F5
+  - F6
+  - F11
+  - F17
+  - F18
+  - F19
+  - F20
+  - ''
+  - PAUSE BREAK
+  - F1
+  - F2
+  - F3
+  - F10
   - ''
   - ''
   - {type: held}
-  - '&mkp RCLK'
-  - Scroll
-  - '&mkp LCLK'
-  - ''
-  - '&studio_unlock'
-  - '&mkp LCLK'
-  - Scroll
-  - '&mkp RCLK'
-  - ''
-  - ''
-  - '&mkp LCLK'
-  - '&mkp RCLK'
-  - '&mkp RCLK'
-  - '&mkp LCLK'
-  Scroll:
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - ''
-  - BT CLR
-  - BT CLR
-  - ''
-  - {t: BT, h: '2'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '0'}
-  - ''
-  - ''
-  - '&mkp MCLK'
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&mkp MCLK'
-  - ''
-  - ''
-  - {type: held}
-  - '&mkp RCLK'
-  - {type: held}
-  - '&mkp LCLK'
-  - ''
-  - ''
-  - '&mkp LCLK'
-  - ''
-  - '&mkp RCLK'
-  - ''
-  - ''
-  - '&mkp LCLK'
-  - '&mkp RCLK'
-  - '&mkp RCLK'
-  - '&mkp LCLK'
+  - Enter
+  - APP
+  SNIPE: ['&bootloader', '', '', '', '', '', '', '', '', '&bootloader', '', '', Ctl+Z, Ctl+Y, '', '', Ctl+Y, Ctl+Z, '', '', '', Ctl+X, Ctl+C, Ctl+V, '', '', Ctl+V,
+    Ctl+C, Ctl+X, '', '&mkp MCLK', '&mkp LCLK', '&mkp RCLK', '', '']
