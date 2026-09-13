@@ -204,7 +204,7 @@
                         >;
                 };
  
-                fun_layer { // Layer 9
+                fun_layer { // Layer 9 + scroll
                     display-name = "FUN";
 // -----------------------------------------------------------------------------------------
 // | F13  | F14  | F15   | F16   |    |   | PSCRN       | F7 | F8 | F9 | F12 |
@@ -216,6 +216,21 @@
    &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none   &kp SLCK        &kp F4 &kp F5 &kp F6 &kp F11
    &kp F17  &kp F18  &kp F19   &kp F20   &none   &kp PAUSE_BREAK &kp F1 &kp F2 &kp F3 &kp F10
                              &none &none &none   &kp RET
+                        >;
+                };
+
+                snipe_layer { // Layer 10
+                    display-name = "SNIPE";
+// -----------------------------------------------------------------------------------------
+// | BOOT |     |      |       |    |   |    |       |      |     | BOOT |
+// |      |     | UNDO | REDO  |    |   |    | REDO  | UNDO |     |      |
+// |      | CUT | COPY | PASTE |    |   |    | PASTE | COPY | CUT |      |
+//             | MCLK | LCLK | RCLK |   |    |    |
+                        bindings = <
+   &bootloader &none     &none     &none     &none   &none &none     &none     &none     &bootloader
+   &none       &none     &kp LC(Z) &kp LC(Y) &none   &none &kp LC(Y) &kp LC(Z) &none     &none
+   &none       &kp LC(X) &kp LC(C) &kp LC(V) &none   &none &kp LC(V) &kp LC(C) &kp LC(X) &none
+                     &mkp MCLK &mkp LCLK &mkp RCLK   &none &none
                         >;
                 };
         };
