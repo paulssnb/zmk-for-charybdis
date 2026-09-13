@@ -150,12 +150,12 @@
 // | BOOT |     |      |       |    |   |    |       |      |     | BOOT |
 // |      |     | UNDO | REDO  |    |   |    | REDO  | UNDO |     |      |
 // |      | CUT | COPY | PASTE |    |   |    | PASTE | COPY | CUT |      |
-//             | MCLK | LCLK | RCLK |   |    |    |
+//             | MCLK | LCLK | RCLK |   | MOUSE4 | MOUSE5 |
                         bindings = <
    &bootloader &none     &none     &none     &none   &none &none     &none     &none     &bootloader
    &none       &none     &kp LC(Z) &kp LC(Y) &none   &none &kp LC(Y) &kp LC(Z) &none     &none
    &none       &kp LC(X) &kp LC(C) &kp LC(V) &none   &none &kp LC(V) &kp LC(C) &kp LC(X) &none
-                     &mkp MCLK &mkp LCLK &mkp RCLK   &none &none
+                     &mkp MCLK &mkp LCLK &mkp RCLK   &mkp MB4 &mkp MB5
                         >;
                 };
  
@@ -235,23 +235,3 @@
                 };
         };
 };
-
-//         Mouse {
-//             bindings = <
-// &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &bt BT_CLR    &bt BT_CLR      &none      &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0
-// &none         &none         &mkp MCLK     &none      &none         &none           &none      &mkp MCLK     &none         &none
-// &none         &mkp RCLK     &mo 4         &mkp LCLK  &none         &studio_unlock  &mkp LCLK  &mo 4         &mkp RCLK     &none
-//                                    &none  &mkp LCLK  &mkp RCLK     &mkp RCLK  &mkp LCLK
-//             >;
-//         };
-// 
-//         Scroll {
-//             bindings = <
-// &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &bt BT_CLR    &bt BT_CLR  &none      &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0
-// &none         &none         &mkp MCLK     &none      &none         &none       &none      &mkp MCLK     &none         &none
-// &none         &mkp RCLK     &none         &mkp LCLK  &none         &none       &mkp LCLK  &none         &mkp RCLK     &none
-//                                    &none  &mkp LCLK  &mkp RCLK     &mkp RCLK  &mkp LCLK
-//             >;
-//         };
-//     };
-// };
