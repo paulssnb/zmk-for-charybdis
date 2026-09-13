@@ -136,12 +136,12 @@
 // |      |      |       |       |    |   | REDO | PASTE | COPY  | CUT   | UNDO |
 // | LGUI | LALT | LCTRL | LSHFT |    |   | LEFT | DOWN  | UP    | RIGHT | CLCK |
 // |      |      |       |       |    |   | HOME | PG_DN | PG_UP | END   | INS  |
-//                     |    |    |    |   | ENT | BSPC |
+//                     |    |    |    |   | ENT | DEL |
                         bindings = <
    &none    &none    &none     &none     &none    &kp LC(Y) &kp LC(V) &kp LC(C) &kp LC(X)  &kp LC(Z)
    &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none    &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &kp CLCK
    &none    &none    &none     &none     &none    &kp HOME   &kp PG_DN &kp PG_UP &kp END   &kp INS
-                             &none &none &none    &kp RET &kp BSPC
+                             &none &none &none    &kp RET &kp DEL
                         >;
                 };
  
@@ -216,7 +216,7 @@
    &kp F13  &kp F14  &kp F15   &kp F16   &none   &kp PSCRN       &kp F7 &kp F8 &kp F9 &kp F12
    &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none   &kp SLCK        &kp F4 &kp F5 &kp F6 &kp F11
    &kp F17  &kp F18  &kp F19   &kp F20   &none   &kp PAUSE_BREAK &kp F1 &kp F2 &kp F3 &kp F10
-                             &none &none &none   &kp RET
+                             &none &none &none   &kp RET &kp K_APP
                         >;
                 };
 
