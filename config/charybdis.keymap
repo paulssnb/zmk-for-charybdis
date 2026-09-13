@@ -132,12 +132,12 @@
                 navigation_layer { // Layer 4
                     display-name = "NAV";
 // -----------------------------------------------------------------------------------------
-// |      |      |       |       |    |   | K_REDO | LC(V) | LC(C) | LC(X) | K_UNDO |
-// | LGUI | LALT | LCTRL | LSHFT |    |   | LEFT   | DOWN  | UP    | RIGHT | CLCK   |
-// |      |      |       |       |    |   | HOME   | PG_DN | PG_UP | END   | INS    |
+// |      |      |       |       |    |   | REDO | PASTE | COPY  | CUT   | UNDO |
+// | LGUI | LALT | LCTRL | LSHFT |    |   | LEFT | DOWN  | UP    | RIGHT | CLCK |
+// |      |      |       |       |    |   | HOME | PG_DN | PG_UP | END   | INS  |
 //                     |    |    |    |   | ENT | BSPC |
                         bindings = <
-   &none    &none    &none     &none     &none    &kp K_REDO &kp LC(V) &kp LC(C) &kp LC(X) &kp K_UNDO
+   &none    &none    &none     &none     &none    &kp LC(Y) &kp LC(V) &kp LC(C) &kp LC(X)  &kp LC(Z)
    &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none    &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT &kp CLCK
    &none    &none    &none     &none     &none    &kp HOME   &kp PG_DN &kp PG_UP &kp END   &kp INS
                              &none &none &none    &kp RET &kp BSPC
@@ -147,15 +147,15 @@
                 button_layer { // Layer 5
                     display-name = "BUTTON";
 // -----------------------------------------------------------------------------------------
-// | BOOT |       |        |        |    |   |    |        |        |       | BOOT |
-// |      |       | K_UNDO | K_REDO |    |   |    | K_REDO | K_UNDO |       |      |
-// |      | LC(X) | LC(C)  | LC(V)  |    |   |    | LC(V)  | LC(C)  | LC(X) |      |
-//                        |    |    |    |   |    |    |
+// | BOOT |     |      |       |    |   |    |       |      |     | BOOT |
+// |      |     | UNDO | REDO  |    |   |    | REDO  | UNDO |     |      |
+// |      | CUT | COPY | PASTE |    |   |    | PASTE | COPY | CUT |      |
+//             | MCLK | LCLK | RCLK |   |    |    |
                         bindings = <
-   &bootloader &none     &none      &none      &none   &none &none      &none      &none     &bootloader
-   &none       &none     &kp K_UNDO &kp K_REDO &none   &none &kp K_REDO &kp K_UNDO &none     &none
-   &none       &kp LC(X) &kp LC(C)  &kp LC(V)  &none   &none &kp LC(V)  &kp LC(C)  &kp LC(X) &none
-                                   &none &none &none   &none &none
+   &bootloader &none     &none     &none     &none   &none &none     &none     &none     &bootloader
+   &none       &none     &kp LC(Z) &kp LC(Y) &none   &none &kp LC(Y) &kp LC(Z) &none     &none
+   &none       &kp LC(X) &kp LC(C) &kp LC(V) &none   &none &kp LC(V) &kp LC(C) &kp LC(X) &none
+                     &mkp MCLK &mkp LCLK &mkp RCLK   &none &none
                         >;
                 };
  
@@ -164,12 +164,12 @@
 // -----------------------------------------------------------------------------------------
 // |      |      |       |       |    |   | RGB_TOG | RGB_EFF  | RGB_HUI  | RGB_SAI  | RGB_BRI |
 // | LGUI | LALT | LCTRL | LSHFT |    |   | EP_TOG  | K_PREV   | C_VOL_DN | C_VOL_UP | C_NEXT  |
-// |      |      |       |       |    |   | OUT_TOG | BT_SEL 0 | BT_SEL 1 | BT_CLR   | RGB_BRD |
+// |      |      |       |       |    |   | C_MUTE  | BT_SEL 0 | BT_SEL 1 | BT_CLR   | RGB_BRD |
 //                     |    |    |    |   | C_STOP | C_PP |
                         bindings = <
    &none    &none    &none     &none     &none   &rgb_ug RGB_TOG   &rgb_ug RGB_EFF  &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI
    &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none   &ext_power EP_TOG &kp K_PREV       &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT
-   &none    &none    &none     &none     &none   &out OUT_TOG      &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_CLR      &rgb_ug RGB_BRD
+   &none    &none    &none     &none     &none   &kp C_MUTE        &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_CLR      &rgb_ug RGB_BRD
                              &none &none &none   &kp C_STOP &kp C_PP
                         >;
                 };
@@ -177,9 +177,9 @@
                 num_layer { // Layer 7
                     display-name = "NUM";
 // -----------------------------------------------------------------------------------------
-// | LBKT  | N7 | N8 | N9 | RBKT  |   |    |       |       |      |      | (BASE) |
-// | SEMI  | N4 | N5 | N6 | EQUAL |   |    | RSHFT | RCTRL | RALT | RGUI | (NAV)  |
-// | GRAVE | N1 | N2 | N3 | BSLH  |   |    |       |       |      |      |        |
+// | LBKT  | N7 | N8 | N9 | RBKT  |   |    |       |       |      |      |
+// | SEMI  | N4 | N5 | N6 | EQUAL |   |    | RSHFT | RCTRL | RALT | RGUI |
+// | GRAVE | N1 | N2 | N3 | BSLH  |   |    |       |       |      |      |
 //             | DOT | N0 | MINUS |   |    |    |
                         bindings = <
    &kp LBKT  &kp N7 &kp N8 &kp N9 &kp RBKT   &none &none     &none     &none    &none
