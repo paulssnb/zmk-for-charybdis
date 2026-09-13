@@ -73,14 +73,14 @@
                 base_layer { // Layer O
                     display-name = "BASE";
 // -----------------------------------------------------------------------------------------
-// | Q          | W        | E         | R         | T |   | Y | U         | I         | O        | P             |
-// | A (LGUI)   | S (LALT) | D (LCTRL) | F (LSHFT) | G |   | H | J (RSHFT) | K (RCTRL) | L (RALT) | SQT (RGUI)    |
-// | Z (BUTTON) | X        | C         | V         | B |   | N | M         | COMMA     | DOT      | FSLH (BUTTON) |
+// | Q          | W        | E         | R         | T |   | Y | U         | I         | O        | P            |
+// | A (LGUI)   | S (LALT) | D (LCTRL) | F (LSHFT) | G |   | H | J (RSHFT) | K (RCTRL) | L (RALT) | SQT (RGUI)   |
+// | Z (BUTTON) | X        | C         | V         | B |   | N | M         | COMMA     | DOT      | FSLH (SNIPE) |
 //               | ESC (MEDIA) | SPC (NAV) | TAB (FUN) |   | RET (SYM) | BSPC (NUM) |
                         bindings = <
    &td_q_ae    &kp W       &kp E        &kp R        &kp T   &kp Y &td_u_h       &td_i_mz         &kp O         &kp P
    &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G   &kp H &hmr RSHFT J  &hmr RCTRL K     &hmr RALT L   &hmr RGUI SQT
-   &lt 5 Z     &kp X       &kp C        &kp V        &kp B   &kp N &kp M         &kp COMMA        &kp DOT       &lt 5 FSLH
+   &lt 5 Z     &kp X       &kp C        &kp V        &kp B   &kp N &kp M         &kp COMMA        &kp DOT       &lt 10 FSLH
                              &lt 6 ESC &lt 4 SPC &lt 9 TAB   &lt 8 RET &lt 7 BSPC
                         >;
                 };
@@ -91,12 +91,12 @@
 // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I     |  O    |  P      |
 // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K     |  L    |  SQT    |
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  COMMA |  DOT  |  FSLH   |
-//             | ESC | SPC | TAB |   | RET | BSPC |
+//    | ESC (BUTTON) | SPC | TAB |   | RET | BSPC |
                         bindings = <
    &td_q_ae &kp W &kp E &kp R &kp T   &kp Y &td_u_h &td_i_mz  &kp O   &kp P
    &kp A    &kp S &kp D &kp F &kp G   &kp H &kp J   &kp K     &kp L   &kp SQT
    &kp Z    &kp X &kp C &kp V &kp B   &kp N &kp M   &kp COMMA &kp DOT &kp FSLH
-            &kp ESC &kp SPC &kp TAB   &kp RET &kp BSPC
+          &lt 5 ESC &kp SPC &kp TAB   &kp RET &kp BSPC
                         >;
                 };
  
@@ -121,12 +121,12 @@
 // |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U      |  Y    |  SQT  |
 // |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E      |  I    |  O    |
 // |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H  |  COMMA  |  DOT  |  FSLH |
-//             | ESC | SPC | TAB |   | ENT | BSPC |
+//     | ESC (BUTTON)| SPC | TAB |   | ENT | BSPC |
                         bindings = <
    &kp Q    &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SQT
    &kp A    &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O
    &kp Z    &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH
-            &kp ESC &kp SPC &kp TAB   &kp RET &kp BSPC
+          &lt 5 ESC &kp SPC &kp TAB   &kp RET &kp BSPC
                         >;
                 };
  
@@ -148,12 +148,12 @@
                 button_layer { // Layer 5
                     display-name = "BUTTON";
 // -----------------------------------------------------------------------------------------
-// | BOOT |     |      |       |    |   |    |       |      |     | BOOT |
-// |      |     | UNDO | REDO  |    |   |    | REDO  | UNDO |     |      |
-// |      | CUT | COPY | PASTE |    |   |    | PASTE | COPY | CUT |      |
+// | BOOT |     |      |       |    |   | BASE | BTAP  | CDH  | CTAP | BOOT |
+// |      |     | UNDO | REDO  |    |   |      | REDO  | UNDO |      |      |
+// |      | CUT | COPY | PASTE |    |   |      | PASTE | COPY | CUT  |      |
 //             | MCLK | LCLK | RCLK |   | MOUSE4 | MOUSE5 |
                         bindings = <
-   &bootloader &none     &none     &none     &none   &none &none     &none     &none     &bootloader
+   &bootloader &none     &none     &none     &none   &to 0 &to 1     &to 2     &to 3     &bootloader
    &none       &none     &kp LC(Z) &kp LC(Y) &none   &none &kp LC(Y) &kp LC(Z) &none     &none
    &none       &kp LC(X) &kp LC(C) &kp LC(V) &none   &none &kp LC(V) &kp LC(C) &kp LC(X) &none
                      &mkp MCLK &mkp LCLK &mkp RCLK   &mkp MB4 &mkp MB5
