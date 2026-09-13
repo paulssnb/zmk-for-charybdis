@@ -67,6 +67,7 @@
                         	RC(3,2) RC(3,3) RC(3,0)     RC(3,5) RC(3,7)
         >;
     };
+};
 
 &charybdis_layout {
         transform = <&default_transform>;
