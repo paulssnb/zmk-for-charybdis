@@ -226,12 +226,12 @@
 // | BOOT |     |      |       |    |   |    |       |      |     | BOOT |
 // |      |     | UNDO | REDO  |    |   |    | REDO  | UNDO |     |      |
 // |      | CUT | COPY | PASTE |    |   |    | PASTE | COPY | CUT |      |
-//             | MCLK | LCLK | RCLK |   |    |    |
+//             | MCLK | LCLK | RCLK |   | MOUSE4 | MOUSE5 |
                         bindings = <
    &bootloader &none     &none     &none     &none   &none &none     &none     &none     &bootloader
    &none       &none     &kp LC(Z) &kp LC(Y) &none   &none &kp LC(Y) &kp LC(Z) &none     &none
    &none       &kp LC(X) &kp LC(C) &kp LC(V) &none   &none &kp LC(V) &kp LC(C) &kp LC(X) &none
-                     &mkp MCLK &mkp LCLK &mkp RCLK   &none &none
+                     &mkp MCLK &mkp LCLK &mkp RCLK   &mkp MB4 &mkp MB4
                         >;
                 };
         };
