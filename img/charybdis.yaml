@@ -30,13 +30,48 @@ layers:
   - M
   - ','
   - .
-  - {t: FSLH, h: BUTTON}
+  - {t: FSLH, h: SNIPE}
   - {t: ESC, h: MEDIA}
   - {t: Space, h: NAV}
   - {t: Tab, h: FUN}
   - {t: Enter, h: SYM}
   - {t: BSPC, h: NUM}
-  BTAP: ['&td_q_ae', W, E, R, T, Y, '&td_u_h', '&td_i_mz', O, P, A, S, D, F, G, H, J, K, L, '''', Z, X, C, V, B, N, M, ',', ., FSLH, ESC, Space, Tab, Enter, BSPC]
+  BTAP:
+  - '&td_q_ae'
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - '&td_u_h'
+  - '&td_i_mz'
+  - O
+  - P
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ''''
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - FSLH
+  - {t: ESC, h: BUTTON}
+  - Space
+  - Tab
+  - Enter
+  - BSPC
   CDH:
   - Q
   - W
@@ -73,7 +108,42 @@ layers:
   - {t: Tab, h: FUN}
   - {t: Enter, h: SYM}
   - {t: BSPC, h: NUM}
-  CTAP: [Q, W, F, P, B, J, L, U, Y, '''', A, R, S, T, G, M, N, E, I, O, Z, X, C, D, V, K, H, ',', ., FSLH, ESC, Space, Tab, Enter, BSPC]
+  CTAP:
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ''''
+  - A
+  - R
+  - S
+  - T
+  - G
+  - M
+  - N
+  - E
+  - I
+  - O
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - FSLH
+  - {t: ESC, h: BUTTON}
+  - Space
+  - Tab
+  - Enter
+  - BSPC
   NAV:
   - ''
   - ''
@@ -116,10 +186,10 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: BASE, h: toggle}
+  - {t: BTAP, h: toggle}
+  - {t: CDH, h: toggle}
+  - {t: CTAP, h: toggle}
   - '&bootloader'
   - ''
   - ''
@@ -290,5 +360,39 @@ layers:
   - {type: held}
   - Enter
   - APP
-  SNIPE: ['&bootloader', '', '', '', '', '', '', '', '', '&bootloader', '', '', Ctl+Z, Ctl+Y, '', '', Ctl+Y, Ctl+Z, '', '', '', Ctl+X, Ctl+C, Ctl+V, '', '', Ctl+V,
-    Ctl+C, Ctl+X, '', '&mkp MCLK', '&mkp LCLK', '&mkp RCLK', '', '']
+  SNIPE:
+  - '&bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bootloader'
+  - ''
+  - ''
+  - Ctl+Z
+  - Ctl+Y
+  - ''
+  - ''
+  - Ctl+Y
+  - Ctl+Z
+  - ''
+  - ''
+  - ''
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - ''
+  - ''
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - {type: held}
+  - '&mkp MCLK'
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - ''
+  - ''
