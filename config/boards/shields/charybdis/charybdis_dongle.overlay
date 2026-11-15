@@ -35,8 +35,8 @@
         track_remainders;
         bindings = <&kp RIGHT>,
                    <&kp LEFT>,
-                   <&kp UP>;
-                   <&kp DOWN>,
+                   <&kp UP>,
+                   <&kp DOWN>;
         tick = <60>;
         wait-ms = <0>;
         tap-ms = <10>;
