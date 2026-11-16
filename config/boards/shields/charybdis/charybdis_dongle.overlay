@@ -49,8 +49,8 @@
 };
 
 &trackball_listener {
-    // automouse: при движении шара включается слой 5, выключается через 400 мс покоя
-    input-processors = <&zip_temp_layer 5 400>;
+    // automouse: при движении шара включается слой 5, выключается через 300 мс покоя
+    input-processors = <&zip_temp_layer 5 300>;
 
     snipe {
         layers = <10>;
@@ -60,9 +60,9 @@
 
     scroller {
         layers = <9>;
-        // чем больше делитель (10), тем медленнее работает скролл
+        // чем больше делитель (20), тем медленнее работает скролл
         input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT
-                            &zip_xy_scaler 1 10
+                            &zip_xy_scaler 1 20
                             &zip_xy_to_scroll_mapper>;
     };
 
